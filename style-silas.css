@@ -133,7 +133,7 @@ body {
     box-shadow: none;
 }
 
-.button-black {
+.calcular-button-black {
     align-items: center;
     appearance: none;
     background-color: #1c1c1c;
@@ -153,21 +153,75 @@ body {
     transition: box-shadow .15s, transform .15s;
     will-change: box-shadow, transform;
     font-size: 14px;
+    margin-top: 5%;
 }
 
-.button-black:focus {
+.calcular-button-black:focus {
     box-shadow: #111 0 0 0 1.5px inset, rgba(45, 35, 66, 0.4) 0 2px 4px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #111 0 -3px 0 inset;
 }
 
-.button-black:hover {
+.calcular-button-black:hover {
     box-shadow: rgba(45, 35, 66, 0.3) 0 4px 8px, rgba(45, 35, 66, 0.2) 0 7px 13px -3px, #111 0 -3px 0 inset;
     transform: translateY(-2px);
 }
 
-.button-black:active {
+.calcular-button-black:active {
     box-shadow: #111 0 3px 7px inset;
     transform: translateY(2px);
 }
+
+.salvar-orcamento-button-black{
+    align-items: center;
+    appearance: none;
+    background-color: #1c1c1c;
+    border-radius: 4px;
+    border-width: 0;
+    box-shadow: rgba(45, 35, 66, 0.2) 0 2px 4px, rgba(45, 35, 66, 0.15) 0 7px 13px -3px, #111 0 -3px 0 inset;
+    box-sizing: border-box;
+    color: #cacaca;
+    cursor: pointer;
+    display: inline-flex;
+    justify-content: center;
+    height: 2rem;
+    line-height: 1;
+    overflow: hidden;
+    padding: 0 2rem;
+    position: relative;
+    transition: box-shadow .15s, transform .15s;
+    will-change: box-shadow, transform;
+    font-size: 14px;
+    margin-top: 5%;
+}
+
+.salvar-orcamento-button-black:focus {
+    box-shadow: #111 0 0 0 1.5px inset, rgba(45, 35, 66, 0.4) 0 2px 4px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #111 0 -3px 0 inset;
+}
+
+.salvar-orcamento-button-black:hover {
+    box-shadow: rgba(45, 35, 66, 0.3) 0 4px 8px, rgba(45, 35, 66, 0.2) 0 7px 13px -3px, #111 0 -3px 0 inset;
+    transform: translateY(-2px);
+}
+
+.salvar-orcamento-button-black:active {
+    box-shadow: #111 0 3px 7px inset;
+    transform: translateY(2px);
+}
+.resultado {
+  margin-top: 10px;
+  color: rgb(247, 18, 18);
+  font-size: 25px;
+  margin-left: 20px;
+}
+
+.divMenu {
+  display: none;
+
+}
+
+.divMenu.active {
+  display: block;
+}
+
 
 @keyframes zoom {
     0% {
@@ -180,3 +234,173 @@ body {
         transform: scale(1, 1);
     }
 }
+
+
+  .contente2 {
+    top: 1px;
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    background-color: white;
+  
+  
+  }
+  
+
+  
+  .contente3 {
+    top: 1px;
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    background-color: black;
+  }
+  
+  .contente4 {
+    top: 1px;
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    background-color: black;
+  }
+  
+  .contente5 {
+    top: 1px;
+    position: absolute;
+    background-color: transparent;
+    width: 100%;
+    height: 100vh;
+  
+  }
+  .cont {
+    max-width: 1200px;
+    display: flex;
+    flex-wrap: wrap;
+    position: absolute;
+    padding-left: 1rem;
+  
+  }
+  
+  .cont div {
+    flex: 1 1 200px;
+    margin: 40px;
+    margin-left: 100px;
+    cursor: pointer;
+  }
+  
+  .cont img {
+    width: 100%;
+    height: 100%;
+    border-radius: .5rem;
+    box-shadow: .2rem .2rem .2rem 0.1rem;
+  
+  
+  }
+  
+  
+  .cont h2 {
+    font-size: 1rem;
+    color: white;
+  }
+  
+  .cont3 {
+    max-width: 1200px;
+    display: flex;
+    flex-wrap: wrap;
+    position: absolute;
+    padding-left: 1rem;
+  
+  
+  }
+  
+  .cont3 div {
+    flex: 1 1 200px;
+    margin: 15px;
+    margin-top: 40px;
+    margin-left: 100px;
+    cursor: pointer;
+  }
+  
+.cont3 h2 {
+    font-size: 20px;
+    color: white;
+  }
+
+  
+  
+.cont3 img {
+    width: 100%;
+    height: 100%;
+    border-radius: .5rem;
+    box-shadow: .2rem .2rem .2rem 0.1rem;
+    color: black;
+  
+  }
+
+
+  .card2 {
+    background-color: rgba(59, 106, 128, 0.493);
+    padding: 3%;
+    border-radius: 10px;
+    box-shadow: 5px 5px 5px 2px;
+    margin-top: 5%;
+    width: 30vw;
+    height: 60vh;
+    margin-left: 35%;
+    margin-top: 9.5%;
+    font-family: var(--font-4);
+    font-size: 30px;
+
+  
+  
+  }
+  .card2 h1 {
+    display: flex;
+    justify-content: center;
+    font-size: 26px;
+  }
+
+ 
+  
+  
+  .card2 input {
+      
+    font-size: 20px;
+    width: 15%;
+    margin-left: 43%;
+    background-color: darkgrey;
+  }
+  .card2 label{
+      font-family: var(--font-4);
+      font-size: 1.5rem;
+  }
+
+  .botaoCalcular .calcular2 {
+    margin-left: 25%;
+    margin-top: 15%;
+    font-size: 20px;
+    background-color: black;
+    width: 10rem;
+    height: 2rem;
+    border-radius: 10px;
+    color: red;
+    cursor: pointer;
+  
+  }
+  
+  .calcular2:hover {
+    background-color: red;
+    color: rgb(248, 244, 244);
+    font-family: var(--font-4);
+    cursor: pointer;
+    color: black;
+  }
+  
+  .porcento {
+    font-size: 18px;
+    border-radius: 5px;
+    margin-left: 32%;
+    background-color: darkgrey;
+  
+  }
+ 

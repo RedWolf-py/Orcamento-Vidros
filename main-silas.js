@@ -6,10 +6,11 @@ var xys = (e) => {
     return document.querySelectorAll(e);
 }
 
-
-var menu = xy('.menu');
+/*
+var menu = xy('.menu')
 
 menu.addEventListener('click', function() {
+    
     var diferente = xy('.mover').classList.toggle("mostrar");
 });
 
@@ -22,38 +23,37 @@ for (let i = 0; i < tagLi.length; i++) {
 
     });
 }
+*/
+var liMenu = xys('.liMenu');
 
-var iconBx = xys('.iconBx');
-
-var contentBx = xys('.contentBx');
+var divMenu = xys('.divMenu');
 
 
-for (var i = 0; i < iconBx.length; i++) {
-    var clicou = iconBx[i].addEventListener("click", function() {
-        for (var i = 0; i < contentBx.length; i++) {
-            contentBx[i].className = 'contentBx';
+for (var i = 0; i < liMenu.length; i++) {
+    var clicou = liMenu[i].addEventListener("click", function() {
+        for (var i = 0; i < divMenu.length; i++) {
+            divMenu[i].className = 'divMenu';
 
         }
-        document.getElementById(this.dataset.id).className = 'contentBx active';
+        document.getElementById(this.dataset.id).className = 'divMenu active';
 
     })
 
 }
 
-var calcular = xy('.calcular');
+var calcular = xy('.calcular-button-black');
 
 var somaFinal = [];
 
 function metroQuadrado() {
 
-    var cliente = xy('.cliente').value;
-    var modelo = xy('.modelo2').value;
-    var espessura = xy('.espessura').value;
+  
     var altura = xy('.altura').value;
     var largura = xy('.largura').value;
-    var ferragen = xy('.ferragen').value;
+    var ferragen = xy('.ferragem').value;
     var material = xy('.material').value;
     var preco = xy('.preco').value;
+    console.log(altura,largura,material,preco)
 
     var resultado = xy('.resultado');
 
@@ -79,7 +79,7 @@ function metroQuadrado() {
     var somar = conversao.reduce(function(somar, i) {
         return somar + i;
     });
-    console.log(somar)
+    
 
 
     resultado.innerHTML = `R$: ${somar}`;
@@ -91,7 +91,7 @@ function metroQuadrado() {
 };
 
 calcular.addEventListener('click', metroQuadrado);
-console.log(somaFinal)
+
 
 function limpar() {
 
@@ -104,7 +104,8 @@ function limpar() {
 
 var orcamentoFinal = [];
 
-const salvarorcamento = xy('.salvarorcamento');
+var salvarorcamento = xy('.salvar-orcamento-button-black');
+console.log(salvarorcamento)
 
 salvarorcamento.addEventListener("click", () => {
     let objeto = new Array()
@@ -113,22 +114,22 @@ salvarorcamento.addEventListener("click", () => {
         orcamentoFinal.push(JSON.parse(localStorage.getItem("objeto")));
     }
     var clienteP = xy('.cliente').value;
-    var vidroE = xy('.espessura').value;
-    var vidroM = xy('.modelo2').value;
+   // var vidroE = xy('.espessura').value;
+    //var vidroM = xy('.modelo2').value;
     var alturaV = xy('.altura').value;
     var larguraV = xy('.largura').value;
-    var ferragenV = xy('.ferragen').value;
+    var ferragenV = xy('.ferragem').value;
     var materialV = xy('.material').value;
 
 
-    var tipoVidro = [clienteP, vidroM, vidroE, alturaV, larguraV, ferragenV, materialV];
+    var tipoVidro = [clienteP, alturaV, larguraV, ferragenV, materialV];
 
 
     orcamentoFinal.push(tipoVidro);
     var pessoaJson = JSON.stringify(orcamentoFinal);
     localStorage.setItem("objeto", pessoaJson);
 
-    result.insertAdjacentHTML('beforeend', `<li>${[clienteP, vidroM, vidroE, alturaV," ","x"," " ,larguraV]}</li>`)
+    result.insertAdjacentHTML('beforeend', `<li>${[clienteP, alturaV," ","x"," " ,larguraV]}</li>`)
 
     alert("Salvo com Sucesso !");
 
@@ -146,6 +147,7 @@ document.querySelectorAll('.cor').forEach(function(hove) {
 
 
 
+/*
 
 var footerClick = xys('.preco,.altura,.largura, .tot, .cliente');
 
@@ -182,3 +184,4 @@ function totSoma() {
 }
 
 calc.addEventListener('click', totSoma);
+*/
